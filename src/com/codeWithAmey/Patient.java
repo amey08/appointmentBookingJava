@@ -24,12 +24,16 @@ public class Patient {
 //    Pulse Rate
 //    Affected Organ
     private String firstName;
-//    private String lastName;
-//    private String emailID;
+    private String lastName;
+    private String emailID;
+    private String phoneNumber;
     private int ssnNo;
 
-    Patient(String firstName, int ssnNo){
+    Patient(String firstName, String lastName, String emailID, String phoneNumber, int ssnNo){
         this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailID = emailID;
+        this.phoneNumber = phoneNumber;
         this.ssnNo = ssnNo;
     }
 
@@ -41,6 +45,30 @@ public class Patient {
         this.firstName = name;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmailID() {
+        return emailID;
+    }
+
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
+    }
+
+    public String getPhoneNo() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public int getSsnNo() {
         return ssnNo;
     }
@@ -48,5 +76,4 @@ public class Patient {
     public void setSsnNo(int ssnNo) {
         this.ssnNo = ssnNo;
     }
-
 }
